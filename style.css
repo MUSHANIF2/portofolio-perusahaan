@@ -32,7 +32,8 @@
 }
 #banner img {
   width: 500px;
-  margin: 20px 20pxs;
+  position: relative;
+  z-index: 1000;
 }
 #services {
   padding: 80px 0;
@@ -80,7 +81,21 @@
   margin-top: 15px;
   background-image: linear-gradient(to right, #a517ba, #5f1872);
 }
-
+@media screen and (max-width: 992px) {
+  #banner img {
+    width: 500px;
+    position: absolute;
+    top: 20px;
+    bottom: 80px;
+    right: 10px;
+    margin-top: 10px;
+  }
+  #banner .promo-title {
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 330px;
+  }
+}
 html {
   scroll-behavior: smooth;
 }
